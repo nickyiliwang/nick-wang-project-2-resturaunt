@@ -1,0 +1,42 @@
+section.split-info {
+  height: 100vh;
+  background: $primaryBackgroundBlack;
+  position: relative;
+
+  .burger-image,
+  .something-new-image {
+    position: absolute;
+    width: 40%;
+  }
+
+  .burger-image {
+      top: -30px;
+    left: 0;
+    -webkit-box-shadow: 30px 30px 0px -10px $primaryYellow;
+    box-shadow: 30px 30px 0px -10px $primaryYellow;
+  }
+
+  .something-new-image {
+bottom: -30px;
+    right: 0;
+    -webkit-box-shadow: -30px -30px 0px -10px $primaryYellow;
+    box-shadow: -30px 30px 0px -10px $primaryYellow;
+  }
+  .burger,
+  .something-new {
+    padding: 100px 0 80px 0;
+  }
+
+  .burger *, .something-new * {
+      margin-bottom: 20px;
+  }
+
+  .burger {
+    margin-left: 60%;
+  }
+  .something-new {
+    margin-right: 60%;
+    text-align: right;
+    
+  }
+}

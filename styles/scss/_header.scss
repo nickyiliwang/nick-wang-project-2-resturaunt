@@ -1,0 +1,48 @@
+header {
+  background: url("../assets/home-header.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  height: 697px; // matching the header-img
+  padding-top: 50px;
+
+  .image-container {
+    position: absolute;
+    right: 0;
+    width: 55%;
+    top: 35%;
+  }
+
+  span {
+    color: $primaryBlack;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $primaryWhite;
+      width: calc(100% + 10px);
+      left: -5px;
+      right: 0;
+      top: -10px;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  h1 {
+    width: 40%;
+  }
+
+  nav {
+    padding: 50px 0;
+
+    ul {
+      display: flex;
+      li {
+        margin: 0 20px;
+      }
+    }
+  }
+}

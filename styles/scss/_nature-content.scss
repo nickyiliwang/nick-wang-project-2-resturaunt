@@ -1,0 +1,23 @@
+section.nature {
+  padding: 100px 0;
+  background: $primaryBackgroundBlack;
+
+  .container {
+    display: flex;
+  }
+  .nature-image {
+    width: 300px;
+    flex-shrink: 0;
+  }
+
+  .nature-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    // width: 80%;
+
+    a {
+      align-self: flex-start;
+    }
+  }
+}

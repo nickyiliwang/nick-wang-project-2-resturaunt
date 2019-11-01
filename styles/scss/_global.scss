@@ -1,0 +1,120 @@
+// Google fonts
+
+// font-family: 'Josefin Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+
+// setting font-family
+
+// setting font size
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  color: $primaryWhite;
+}
+
+// Headings (Locat.., Comm.., Blog, Get in.., Bring...)
+// JosefinSans, Regular, 45px
+// Line height: 99.8px
+// Heading (win a $100..., bringing nature..)
+// JosefinSans, Regular, 45px
+// Center, Line height: 99.8px
+// Heading (employment...)
+// JosefinSans, Regular, 45px
+// Line height: 99.8px
+// Headings (Best burg.., Try someth.., Comments)
+// JosefinSans, Regular, 40px
+// Line height: 58px, Letter spacing: 1.3px
+// Headings (Featured.., Recent..,
+// JosefinSans, Regular, 25px
+// Line height: 58px, Letter spacing: 0.8px
+
+h1,
+span {
+  @include fontSize(69);
+  line-height: 90px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $primaryWhite;
+}
+
+h2 {
+  @include fontSize(40);
+  text-transform: uppercase;
+}
+
+h3 {
+  @include fontSize(22);
+  font-weight: 500;
+}
+
+p {
+  @include fontSize(18);
+  font-weight: 500;
+  line-height: 30px;
+}
+
+// nav
+
+nav a {
+  @include fontSize(20);
+  color: $primaryWhite;
+  line-height: 29px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+// button
+button {
+  @include fontSize(22.4);
+  line-height: 41.6px;
+  text-align: center;
+  padding: 10px 20px;
+  background: $primaryYellow;
+  color: $primaryBlack;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: $primaryWhite;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+// end of button
+
+// wrapper
+.wrapper {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// image fills container
+img {
+  width: 100%;
+  display: block;
+}
+
+// show menu class for hamburger menu
+.show.menu {
+  display: block;
+}

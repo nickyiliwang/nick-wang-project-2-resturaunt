@@ -1,0 +1,16 @@
+section.cafe {
+  background: url("../assets/banner.jpg");
+  height: 500px;
+}
+
+section.three-images {
+  background: $primaryBlack;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    img {
+      margin: 0 20px;
+    }
+  }
+}
