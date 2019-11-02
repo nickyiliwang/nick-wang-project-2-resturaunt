@@ -1,33 +1,15 @@
-// Google fonts
+// google fonts
 
 // font-family: 'Josefin Sans', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
 
-// setting font-family
-
-// setting font size
+// font size
 html,
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   color: $primaryWhite;
 }
-
-// Headings (Locat.., Comm.., Blog, Get in.., Bring...)
-// JosefinSans, Regular, 45px
-// Line height: 99.8px
-// Heading (win a $100..., bringing nature..)
-// JosefinSans, Regular, 45px
-// Center, Line height: 99.8px
-// Heading (employment...)
-// JosefinSans, Regular, 45px
-// Line height: 99.8px
-// Headings (Best burg.., Try someth.., Comments)
-// JosefinSans, Regular, 40px
-// Line height: 58px, Letter spacing: 1.3px
-// Headings (Featured.., Recent..,
-// JosefinSans, Regular, 25px
-// Line height: 58px, Letter spacing: 0.8px
 
 h1,
 span {
@@ -55,7 +37,6 @@ p {
 }
 
 // nav
-
 nav a {
   @include fontSize(20);
   color: $primaryWhite;
@@ -108,13 +89,8 @@ button:active {
   margin: 0 auto;
 }
 
-// image fills container
+// image
 img {
   width: 100%;
-  display: block;
-}
-
-// show menu class for hamburger menu
-.show.menu {
   display: block;
 }

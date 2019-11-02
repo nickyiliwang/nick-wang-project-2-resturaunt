@@ -1,5 +1,6 @@
 header {
   background: url("../assets/home-header.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top;
   position: relative;
@@ -19,8 +20,7 @@ header {
     z-index: 2;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include pseudo;
       background: $primaryWhite;
       width: calc(100% + 10px);
       left: -5px;
@@ -45,4 +45,10 @@ header {
       }
     }
   }
+}
+
+.blog-header {
+  background: url("../assets/blog-header.jpg");
+  background-position: center;
+  height: 578px;
 }

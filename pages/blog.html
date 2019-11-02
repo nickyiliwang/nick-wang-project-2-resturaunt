@@ -5,19 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Blog</title>
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <h1>blog</h1>
+    <header class="blog-header">
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h1>blog</h1>
+      </div>
+      <!-- end of wrapper -->
     </header>
+
+    <main class="blog-main">
+      <aside>
+        <div class="image-container">
+          <img
+            src="../assets/blog-side-image.jpg"
+            alt="close up shot of salmon dish with vegetables"
+          />
+        </div>
+        <!-- enf of image-container -->
+        <div class="wrapper">
+          <div class="aside-content">
+            <div class="featured">
+              <h3>
+                featured restaurants
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
+                nesciunt odio, ad aliquid ipsa facere explicabo nemo
+                consequuntur enim quas?
+              </p>
+            </div>
+            <!-- end of featured -->
+            <div class="recent">
+              <h3>recent posts</h3>
+              <ul>
+                <li>dolor sit amet consectetur</li>
+                <li>ad aliquid ipsa facere</li>
+                <li>Possimus ratione sit voluptate</li>
+                <li>Nesciunt excepturi consectetur facere</li>
+              </ul>
+            </div>
+            <!-- end of recent -->
+          </div>
+          <!-- end of aside content -->
+        </div>
+        <!-- end of wrapper -->
+      </aside>
+
+      <section class="blog">
+        <div class="wrapper">
+          <h2>employment opportunities</h2>
+          <p>Monday October 30, 2019 by Sulaire</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+            veniam dolores eaque sed omnis. Ipsa quibusdam et dicta error hic
+            tenetur, consequatur tempore maxime commodi.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            facere voluptatibus atque cum temporibus, eius molestiae nihil
+            praesentium quaerat, soluta aliquam ad sed quasi dolore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            inventore at. Possimus ratione sit voluptate dolorem corporis
+            placeat, laboriosam iste in non repudiandae. Eos minima iure quidem,
+            recusandae nam maxime laudantium, consequatur ipsa, voluptates ab
+            architecto laboriosam accusamus. Quis excepturi in fugiat quibusdam
+            corrupti accusantium?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+            facilis laboriosam? Nesciunt excepturi consectetur facere!
+          </p>
+        </div>
+        <!-- end of wrapper -->
+      </section>
+      <!-- end of blog section -->
+      <section class="comments">
+        <div class="wrapper">
+          <h2>comments:</h2>
+          <div class="cards card1">
+            <img
+              src="../assets/comment-1.jpg"
+              alt="head-shot of a asian women"
+            />
+            <h3>Tuesday October 9th, 2019 by Ali</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
+              qui aliquid laboriosam. Dicta, commodi, doloremque laudantium
+              earum facilis dolorem recusandae temporibus aliquam possimus ut
+              repellendus facere quibusdam, quidem tenetur nulla.
+            </p>
+          </div>
+          <!-- end of card 1 -->
+          <div class="cards card2">
+            <img
+              src="../assets/comment-2.jpg"
+              alt="head-shot of a black women"
+            />
+            <h3>Wednsday October 10th, 2019 by Lisa</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+              natus voluptas repellendus aliquam sed tempore dolorem non
+              delectus ullam explicabo?
+            </p>
+          </div>
+          <!-- end of card 2 -->
+        </div>
+        <!-- end of wrapper -->
+        <form action="submit">
+          <label class="visuallyHidden" for="name"
+            >Please enter your name</label
+          >
+          <input
+            type="text"
+            name="comments"
+            id="name"
+            placeholder="Name"
+            class="name"
+          />
+          <label class="visuallyHidden" for="email"
+            >Please enter your email</label
+          >
+          <input
+            type="email"
+            name="comments"
+            class="email"
+            id="email"
+            placeholder="Email address"
+          />
+          <label class="visuallyHidden" for="comments-input"></label>
+          <textarea
+            name="comments"
+            id="comments-input"
+            cols="30"
+            rows="10"
+            placeholder="Comment"
+          ></textarea>
+          <label class="visuallyHidden" for="form-submit"
+            >Post your comment</label
+          >
+          <input
+            type="submit"
+            name="comments"
+            id="form-submit"
+            class="form-submit"
+            value="post comment"
+          />
+        </form>
+        <!-- end of comments form -->
+      </section>
+      <!-- end of comments section -->
+    </main>
+    <footer>
+      <p>Copyright © 2019 Juno College</p>
+    </footer>
   </body>
 </html>

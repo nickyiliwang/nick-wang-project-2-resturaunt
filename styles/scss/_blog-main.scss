@@ -1,0 +1,10 @@
+.blog-main {
+    display: flex;
+    background: $primaryBackgroundGreen;
+}
+
+.blog {
+width: 65%;
+    border-left: 5px solid $primaryYellow;
+    border-bottom: 5px solid $primaryYellow;
+}

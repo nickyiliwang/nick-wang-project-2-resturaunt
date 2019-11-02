@@ -4,19 +4,28 @@ section.nature {
 
   .container {
     display: flex;
+    position: relative;
   }
   .nature-image {
     width: 300px;
-    flex-shrink: 0;
+    position: absolute;
+    top:-30px;
+    -webkit-box-shadow: -30px -30px 0px -10px $primaryYellow;
+    box-shadow: -30px 30px 0px -10px $primaryYellow;
   }
 
   .nature-content {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    // width: 80%;
+    margin-left: 30%;
 
-    a {
+    h2,
+    p {
+      margin-bottom: 20px;
+    }
+
+    button {
       align-self: flex-start;
     }
   }
