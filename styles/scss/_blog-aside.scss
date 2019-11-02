@@ -1,13 +1,27 @@
 aside {
   width: 35%;
   padding-top: 100px;
+  position: relative;
 
   .image-container {
-    width: 300px;
+    width: 455px;
+    position: absolute;
   }
 
   .aside-content {
-      background: $primaryBackgroundBlack;
-      
+    background: $primaryBackgroundBlack;
+    padding: 500px 20px 20px 20px;
+  }
+
+  .recent {
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+      padding-left: 20px;
+
+      li {
+        margin: 20px 0;
+      }
+    }
   }
 }

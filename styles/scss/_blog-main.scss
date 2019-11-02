@@ -1,10 +1,32 @@
 .blog-main {
-    display: flex;
-    background: $primaryBackgroundGreen;
+  display: flex;
+  background: $primaryBackgroundGreen;
 }
 
-.blog {
-width: 65%;
-    border-left: 5px solid $primaryYellow;
-    border-bottom: 5px solid $primaryYellow;
+// groups the blog sections and comment section and divvies it from the aside
+.divider {
+  width: 65%;
+}
+
+section.blog {
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid $primaryYellow;
+  border-bottom: 5px solid $primaryYellow;
+
+  
+
+}
+
+section.comments {
+}
+
+.cards .image-container {
+  width: 92px;
+}
+
+// todo make this a global style
+form {
+  display: flex;
+  flex-direction: column;
 }

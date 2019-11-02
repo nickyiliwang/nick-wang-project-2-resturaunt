@@ -1,7 +1,11 @@
 // google fonts
 
 // font-family: 'Josefin Sans', sans-serif;
+// 400 regular, 600 semi, 700 bold
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+
+// font-family: 'Barlow', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
 
 // font size
 html,
@@ -17,23 +21,32 @@ span {
   line-height: 90px;
   font-weight: 600;
   text-transform: uppercase;
-  color: $primaryWhite;
 }
 
 h2 {
-  @include fontSize(40);
+  @include fontSize(45);
   text-transform: uppercase;
+  font-weight: 400;
+  line-height: 99.8px;
 }
 
 h3 {
-  @include fontSize(22);
-  font-weight: 500;
+  @include fontSize(25);
+  line-height: 58px;
+  letter-spacing: 0.8px;
 }
 
 p {
-  @include fontSize(18);
-  font-weight: 500;
-  line-height: 30px;
+  font-family: "Barlow", sans-serif;
+  @include fontSize(20);
+  font-weight: 400;
+  line-height: 28px;
+}
+
+// icons
+.fas {
+  @include fontSize(30);
+  color: $primaryBlack;
 }
 
 // nav

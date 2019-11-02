@@ -5,11 +5,9 @@ section.general-info {
 
   // icons
   .fas {
-    @include fontSize(36);
-    color: $primaryBlack;
     border-radius: 50%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
     width: 60px;
     height: 60px;
   }

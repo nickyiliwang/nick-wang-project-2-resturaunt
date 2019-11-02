@@ -1,22 +1,19 @@
 // variables
 
 // font colours + pseudo states
-$primaryYellow: #ffd300; // 15, 15, 15
+$primaryYellow: #ffd300;
 $primaryBlack: #494545;
-$primaryWhite: #ffffff; // 255, 255, 255
-
-// Hover
-$primaryHoverRed: #e06666;
-$primaryHoverBlack: #6c717d;
+$primaryWhite: #ffffff;
 
 // background colors
-$primaryBackgroundPine: #2b331b; // 43, 51, 27
-$primaryBackgroundGreen: #364419; // 15, 15, 15
+$primaryBackgroundPine: #2b331b;
+$primaryBackgroundGreen: #364419;
+$primaryBackgroundBlack: #171B0E; 
 
 // anchor tags on hover & focus
 $anchorTagHoverFocus: "a:focus, a:hover";
 
-// mixins/functions
+// mixins
 
 // font sizes turn into rem values
 @mixin fontSize($sizeValue) {
@@ -45,27 +42,4 @@ $anchorTagHoverFocus: "a:focus, a:hover";
   content: $content;
   display: $display;
   position: $pos;
-}
-
-// responsive
-$breakpoints: (
-  "phone": 400px,
-  "phone-wide": 480px,
-  "phone-tablet": 560px,
-  "tablet-small": 640px,
-  "tablet": 768px,
-  "tablet-wide": 1024px,
-  "desktop": 1248px,
-  "desktop-wide": 1440px
-);
-@mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    @if $type == max {
-      $width: $width - 1px;
-    }
-    @media only screen and (#{$type}-width: $width) {
-      @content;
-    }
-  }
 }
