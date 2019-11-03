@@ -239,20 +239,27 @@ body {
 }
 
 h1,
+h2,
+h3,
+button,
+input[type="submit"] {
+  text-transform: uppercase;
+}
+
+h1,
 span {
   font-size: 69px;
   font-size: 3.45rem;
   line-height: 90px;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 45px;
-  font-size: 2.25rem;
-  text-transform: uppercase;
+  font-size: 40px;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 99.8px;
+  line-height: 58px;
+  letter-spacing: 0.8px;
 }
 
 h3 {
@@ -264,6 +271,7 @@ h3 {
 
 p {
   font-family: "Barlow", sans-serif;
+  color: #ffffff;
   font-size: 20px;
   font-size: 1rem;
   font-weight: 400;
@@ -273,7 +281,7 @@ p {
 .fas {
   font-size: 30px;
   font-size: 1.5rem;
-  color: #494545;
+  color: #0F0F0F;
 }
 
 nav a {
@@ -287,27 +295,33 @@ nav a {
   letter-spacing: 1px;
 }
 
-button {
+button,
+input[type="submit"] {
   font-size: 22.4px;
   font-size: 1.12rem;
-  line-height: 41.6px;
-  text-align: center;
-  padding: 10px 20px;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  padding: 0 10px;
   background: #ffd300;
-  color: #494545;
+  color: #0F0F0F;
   text-decoration: none;
-  text-transform: uppercase;
   display: inline-block;
   border: none;
-  margin: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+
+.inverted {
+  color: #ffffff;
+  background: #0F0F0F;
+}
+
+.inverted:hover {
+  background: #ffd300;
+  color: #0F0F0F;
 }
 
 button:hover,
@@ -316,7 +330,7 @@ button:focus {
 }
 
 button:focus {
-  outline: 1px solid #fff;
+  outline: 2px solid red;
   outline-offset: -4px;
 }
 
@@ -327,7 +341,7 @@ button:active {
 
 .wrapper {
   max-width: 1440px;
-  width: 80%;
+  width: 82%;
   margin: 0 auto;
 }
 
@@ -349,12 +363,16 @@ header {
 header .image-container {
   position: absolute;
   right: 0;
-  width: 55%;
+  width: 53%;
   top: 35%;
 }
 
+header h1 {
+  width: 40%;
+}
+
 header span {
-  color: #494545;
+  color: #0F0F0F;
   position: relative;
   z-index: 2;
 }
@@ -365,15 +383,11 @@ header span::before {
   position: absolute;
   background: #ffffff;
   width: calc(100% + 10px);
-  left: -5px;
+  top: -15px;
   right: 0;
-  top: -10px;
   bottom: 0;
+  left: -5px;
   z-index: -1;
-}
-
-header h1 {
-  width: 40%;
 }
 
 header nav {
@@ -392,8 +406,17 @@ header nav ul li {
 
 .blog-header {
   background: url("../assets/blog-header.jpg");
-  background-position: center;
+  background-position: left;
   height: 578px;
+}
+
+.contact-header {
+  background: url("../assets/contact-header.jpg");
+  height: 567px;
+}
+
+.contact-header h1 {
+  width: 100%;
 }
 
 section.cafe {
@@ -402,7 +425,7 @@ section.cafe {
 }
 
 section.three-images {
-  background: #494545;
+  background: #171B0E;
   padding: 100px 0;
 }
 
@@ -485,8 +508,7 @@ form {
 }
 
 section.general-info {
-  height: 90vh;
-  padding-top: 350px;
+  padding: 250px 0 100px 0;
   background-color: #2b331b;
 }
 
@@ -514,22 +536,18 @@ section.general-info ul li {
   margin-bottom: 30px;
 }
 
-section.general-info ul li .icon-container {
+section.general-info ul .icon-container {
   background: #ffd300;
   height: 60px;
   border-radius: 50%;
 }
 
-section.general-info ul li .content-container {
+section.general-info ul .content-container {
   margin-left: 20px;
-}
-
-section.general-info ul li h2 {
-  margin-bottom: 30px;
+  padding-right: 20px;
 }
 
 section.split-info {
-  height: 100vh;
   background: #171B0E;
   position: relative;
 }
@@ -537,30 +555,33 @@ section.split-info {
 section.split-info .burger-image,
 section.split-info .something-new-image {
   position: absolute;
-  width: 40%;
+  width: 43%;
 }
 
 section.split-info .burger-image {
-  top: -30px;
-  left: 0;
   -webkit-box-shadow: 30px 30px 0px -10px #ffd300;
   box-shadow: 30px 30px 0px -10px #ffd300;
+  top: -40px;
+  left: 0;
 }
 
 section.split-info .something-new-image {
-  bottom: -30px;
-  right: 0;
   -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
   box-shadow: -30px 30px 0px -10px #ffd300;
+  bottom: -50px;
+  right: 0;
 }
 
-section.split-info .burger,
+section.split-info .burger {
+  padding: 80px 0;
+}
+
 section.split-info .something-new {
-  padding: 100px 0 80px 0;
+  padding-bottom: 50px;
 }
 
-section.split-info .burger *, section.split-info .something-new * {
-  margin-bottom: 20px;
+section.split-info p {
+  margin-bottom: 50px;
 }
 
 section.split-info .burger {
@@ -573,37 +594,24 @@ section.split-info .something-new {
 }
 
 section.gift-card {
-  padding: 180px 200px 100px 200px;
+  padding: 180px 100px 100px 100px;
   text-align: center;
   background: #2b331b;
 }
 
-section.gift-card h2,
 section.gift-card p {
+  text-align: left;
   margin-bottom: 50px;
 }
 
 section.gift-card h2 {
+  margin-bottom: 20px;
   color: #ffd300;
-}
-
-section.gift-card p {
-  text-align: left;
-}
-
-section.gift-card button {
-  background: #494545;
-  color: #ffffff;
-}
-
-section.gift-card button:hover {
-  background: #ffd300;
-  color: #494545;
 }
 
 section.nature {
   padding: 100px 0;
-  background: #171B0E;
+  background: #2b331b;
 }
 
 section.nature .container {
@@ -616,7 +624,6 @@ section.nature .container {
 section.nature .nature-image {
   width: 300px;
   position: absolute;
-  top: -30px;
   -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
   box-shadow: -30px 30px 0px -10px #ffd300;
 }
@@ -635,9 +642,12 @@ section.nature .nature-content {
   margin-left: 30%;
 }
 
-section.nature .nature-content h2,
+section.nature .nature-content h2 {
+  color: #ffd300;
+}
+
 section.nature .nature-content p {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 section.nature .nature-content button {
@@ -648,5 +658,6 @@ section.nature .nature-content button {
 footer {
   text-align: center;
   color: #ffffff;
-  background: #494545;
+  background: #0F0F0F;
+  padding: 20px 0;
 }

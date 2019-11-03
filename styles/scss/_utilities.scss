@@ -2,13 +2,13 @@
 
 // font colours + pseudo states
 $primaryYellow: #ffd300;
-$primaryBlack: #494545;
+$primaryBlack: #0F0F0F;
 $primaryWhite: #ffffff;
 
 // background colors
 $primaryBackgroundPine: #2b331b;
 $primaryBackgroundGreen: #364419;
-$primaryBackgroundBlack: #171B0E; 
+$primaryBackgroundBlack: #171B0E;
 
 // anchor tags on hover & focus
 $anchorTagHoverFocus: "a:focus, a:hover";
@@ -43,3 +43,15 @@ $anchorTagHoverFocus: "a:focus, a:hover";
   display: $display;
   position: $pos;
 }
+
+@mixin box-shadow-left {
+  -webkit-box-shadow: -30px -30px 0px -10px $primaryYellow;
+    box-shadow: -30px 30px 0px -10px $primaryYellow;
+}
+
+@mixin box-shadow-right {
+  -webkit-box-shadow: 30px 30px 0px -10px $primaryYellow;
+  box-shadow: 30px 30px 0px -10px $primaryYellow;
+}
+
+

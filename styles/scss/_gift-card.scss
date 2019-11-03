@@ -1,28 +1,15 @@
 section.gift-card {
-  padding: 180px 200px 100px 200px;
+  padding: 180px 100px 100px 100px;
   text-align: center;
   background: $primaryBackgroundPine;
-
-  h2,
+  
   p {
+    text-align: left;
     margin-bottom: 50px;
   }
 
   h2 {
+    margin-bottom: 20px;    
     color: $primaryYellow;
-  }
-
-  p {
-    text-align: left;
-  }
-
-  button {
-    background: $primaryBlack;
-    color: $primaryWhite;
-
-    &:hover {
-      background: $primaryYellow;
-      color: $primaryBlack;
-    }
   }
 }

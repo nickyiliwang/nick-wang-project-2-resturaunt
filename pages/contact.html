@@ -5,21 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
 </head>
 <body>
     <body>
-    <header>
-           <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    
-        <h1>get in touch</h1>
-
+    <header class="contact-header">
+           <div class="wrapper">
+               <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        
+            <h1>get in touch</h1>
+           </div>
+           <!-- end of wrapper -->
     </header>
+    
+    <main>
+        <section class="contact">
+            <div class="contact-info">
+                <div class="socials">
+
+                    
+                </div>
+
+            </div>
+
+
+
+            <form action="submit">
+                <div class="user-info">
+                  <label class="visuallyHidden" for="name"
+                    >Please enter your name</label
+                  >
+                  <input
+                    type="text"
+                    name="message"
+                    id="name"
+                    placeholder="Name"
+                    class="name"
+                  />
+                  <label class="visuallyHidden" for="email"
+                    >Please enter your email</label
+                  >
+                  <input
+                    type="email"
+                    name="message"
+                    class="email"
+                    id="email"
+                    placeholder="Email address"
+                  />
+                </div>
+                <label class="visuallyHidden" for="message-input">Please enter your message</label>
+                <textarea
+                  name="message"
+                  id="message-input"
+                  cols="30"
+                  rows="10"
+                  placeholder="Comment"
+                ></textarea>
+                <label class="visuallyHidden" for="form-submit">
+                  Submit
+                </label>
+                <input
+                  type="submit"
+                  name="message"
+                  id="form-submit"
+                  class="form-submit"
+                  value="post comment"
+                />
+              </form>
+    
+        </section>
+    </main>
+        <footer>
+      <p>Copyright © 2019 Juno College</p>
+    </footer>
 </body>
 </html>

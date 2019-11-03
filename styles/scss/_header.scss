@@ -1,3 +1,4 @@
+// home page header
 header {
   background: url("../assets/home-header.jpg");
   background-attachment: fixed;
@@ -10,8 +11,12 @@ header {
   .image-container {
     position: absolute;
     right: 0;
-    width: 55%;
+    width: 53%;
     top: 35%;
+  }
+
+  h1 {
+    width: 40%;
   }
 
   span {
@@ -19,20 +24,17 @@ header {
     position: relative;
     z-index: 2;
 
+    // restaurant white border
     &::before {
       @include pseudo;
       background: $primaryWhite;
       width: calc(100% + 10px);
-      left: -5px;
+      top: -15px;
       right: 0;
-      top: -10px;
       bottom: 0;
+      left: -5px;
       z-index: -1;
     }
-  }
-
-  h1 {
-    width: 40%;
   }
 
   nav {
@@ -47,8 +49,18 @@ header {
   }
 }
 
+// blog page header
 .blog-header {
   background: url("../assets/blog-header.jpg");
-  background-position: center;
+  background-position: left;
   height: 578px;
+}
+
+// contact page header
+.contact-header {
+  background: url("../assets/contact-header.jpg");
+  height: 567px;
+  h1 {
+    width: 100%;
+  }
 }

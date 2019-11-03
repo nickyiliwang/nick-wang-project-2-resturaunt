@@ -1,6 +1,6 @@
 section.nature {
   padding: 100px 0;
-  background: $primaryBackgroundBlack;
+  background: $primaryBackgroundPine;
 
   .container {
     display: flex;
@@ -9,9 +9,7 @@ section.nature {
   .nature-image {
     width: 300px;
     position: absolute;
-    top:-30px;
-    -webkit-box-shadow: -30px -30px 0px -10px $primaryYellow;
-    box-shadow: -30px 30px 0px -10px $primaryYellow;
+  @include box-shadow-left
   }
 
   .nature-content {
@@ -20,9 +18,12 @@ section.nature {
     flex-direction: column;
     margin-left: 30%;
 
-    h2,
+    h2 {
+      color: $primaryYellow;
+    }
+
     p {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     button {
