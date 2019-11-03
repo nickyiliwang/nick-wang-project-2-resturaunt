@@ -300,6 +300,10 @@ p {
   color: #0F0F0F;
 }
 
+.fab {
+  color: #ffd300;
+}
+
 nav a {
   font-size: 20px;
   font-size: 1rem;
@@ -380,7 +384,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 100px;
 }
 
 form input,
@@ -414,6 +417,17 @@ form textarea::placeholder {
 
 form input {
   border-bottom: 1px solid #ffd300;
+}
+
+form .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .name,
+form .email {
+  width: 50%;
 }
 
 form textarea {
@@ -486,6 +500,8 @@ header nav ul li {
 
 .contact-header {
   background: url("../assets/contact-header.jpg");
+  background-position: right;
+  background-size: cover;
   height: 567px;
 }
 
@@ -740,6 +756,7 @@ section.blog p {
 
 section.comments {
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 section.comments .cards {
@@ -755,6 +772,41 @@ section.comments .cards .image-container {
       flex-shrink: 0;
   margin-top: 10px;
   margin-right: 40px;
+}
+
+section.contact {
+  position: relative;
+  background: #364419;
+  padding: 100px 100px 300px 100px;
+}
+
+section.contact .contact-info {
+  width: 25%;
+}
+
+section.contact .socials, section.contact .info-email {
+  margin-bottom: 20px;
+}
+
+section.contact .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.contact .socials li {
+  margin-right: 20px;
+}
+
+section.contact form {
+  background: #0F0F0F;
+  -webkit-box-shadow: 30px 30px 0px -10px #ffd300;
+  box-shadow: 30px 30px 0px -10px #ffd300;
+  width: 60%;
+  padding: 50px;
+  position: absolute;
+  top: -150px;
+  right: 100px;
 }
 
 footer {

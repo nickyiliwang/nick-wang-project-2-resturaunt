@@ -1,0 +1,32 @@
+section.contact {
+  position: relative;
+  background: $primaryBackgroundGreen;
+  padding: 100px 100px 300px 100px;
+  .contact-info {
+    width: 25%;
+  }
+
+  .socials, .info-email {
+    margin-bottom: 20px;
+
+  }
+
+
+  .socials {
+    display: flex;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  form {
+    background: $primaryBlack;
+    @include box-shadow-right;
+    width: 60%;
+    padding: 50px;
+    position: absolute;
+    top: -150px;
+    right: 100px;
+  }
+}

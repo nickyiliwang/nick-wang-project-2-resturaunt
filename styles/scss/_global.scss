@@ -71,6 +71,9 @@ p {
   @include fontSize(30);
   color: $primaryBlack;
 }
+.fab {
+  color: $primaryYellow;
+}
 
 // nav
 nav a {
@@ -147,7 +150,6 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 
   input,
   textarea {
@@ -164,6 +166,15 @@ form {
 
   input {
     border-bottom: 1px solid $primaryYellow;
+  }
+
+  .user-info {
+    display: flex;
+  }
+
+  .name,
+  .email {
+    width: 50%;
   }
 
   textarea {
