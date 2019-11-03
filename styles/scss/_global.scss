@@ -60,39 +60,54 @@ h4 {
 
 p {
   font-family: "Barlow", sans-serif;
-  color: $primaryWhite;
   @include fontSize(20);
   font-weight: 400;
   line-height: 28px;
+  color: $primaryWhite;
 }
 
 // icons
 .fas {
   @include fontSize(30);
+  text-align: center;
   color: $primaryBlack;
 }
 .fab {
   color: $primaryYellow;
 }
+.fab:hover.fab:before {
+  color: $primaryWhite;
+}
 
 // nav
+
 nav a {
   @include fontSize(20);
   color: $primaryWhite;
   line-height: 29px;
   font-weight: bold;
+  letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
-  letter-spacing: 1px;
+}
+
+nav {
+  padding: 50px 0;
+  ul {
+    display: flex;
+    li {
+      margin: 0 20px;
+    }
+  }
 }
 
 // button
 button,
 input[type="submit"] {
   @include fontSize(22.4);
+  font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.8px;
-  font-weight: 600;
   padding: 0 10px;
   background: $primaryYellow;
   color: $primaryBlack;
@@ -102,10 +117,12 @@ input[type="submit"] {
   transition: all 250ms ease-in-out, transform 150ms ease;
 }
 
+// buttons with inverted colors
 .inverted {
   color: $primaryWhite;
   background: $primaryBlack;
-  &:hover {
+  &:hover,
+  &:focus {
     background: $primaryYellow;
     color: $primaryBlack;
   }

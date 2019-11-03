@@ -5,7 +5,6 @@ section.general-info {
   // icons
   .fas {
     border-radius: 50%;
-    text-align: center;
     padding-top: 15px;
     width: 60px;
     height: 60px;
@@ -15,18 +14,19 @@ section.general-info {
     display: flex;
     flex-wrap: wrap;
     li {
-      width: 50%;
       display: flex;
+      width: 50%;
       margin-bottom: 30px;
     }
-    .icon-container {
-      background: $primaryYellow;
-      height: 60px;
-      border-radius: 50%;
-    }
-    .content-container {
-      margin-left: 20px;
-      padding-right: 20px;
-    }
+  }
+
+  .icon-container {
+    background: $primaryYellow;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .content-container {
+    margin-left: 20px;
+    padding-right: 20px;
   }
 }

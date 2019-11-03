@@ -1,17 +1,14 @@
 // variables
 
-// font colours + pseudo states
+// font colours
 $primaryYellow: #ffd300;
 $primaryBlack: #0F0F0F;
 $primaryWhite: #ffffff;
 
 // background colors
+$primaryBackgroundBlack: #171B0E;
 $primaryBackgroundPine: #2b331b;
 $primaryBackgroundGreen: #364419;
-$primaryBackgroundBlack: #171B0E;
-
-// anchor tags on hover & focus
-$anchorTagHoverFocus: "a:focus, a:hover";
 
 // mixins
 
@@ -28,15 +25,6 @@ $anchorTagHoverFocus: "a:focus, a:hover";
   align-items: center;
 }
 
-// Positioning
-@mixin position($type, $top, $right, $bottom, $left) {
-  position: $type;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
-
 // Pseudo
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
@@ -44,6 +32,7 @@ $anchorTagHoverFocus: "a:focus, a:hover";
   position: $pos;
 }
 
+// box-shadows
 @mixin box-shadow-left {
   -webkit-box-shadow: -30px -30px 0px -10px $primaryYellow;
     box-shadow: -30px 30px 0px -10px $primaryYellow;
