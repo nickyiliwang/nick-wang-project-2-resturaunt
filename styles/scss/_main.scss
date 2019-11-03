@@ -6,11 +6,12 @@ section.cafe {
 section.three-images {
   background: $primaryBackgroundBlack;
   padding: 100px 0;
-  .image-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    img {
+  ul {
+    
+    li {
+    float: left;
+
+      width: calc(100% / 3 - 40px);
       margin: 0 20px;
     }
   }

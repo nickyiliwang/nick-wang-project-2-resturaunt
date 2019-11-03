@@ -36,6 +36,33 @@ header {
       z-index: -1;
     }
   }
+
+  // responsive
+  @include mq($max-width: 1200px) {
+    nav {
+      background: rgba($primaryBlack, $alpha: 0.3);
+      border-radius: 40px;
+    }
+
+    .image-container {
+      width: 40%;
+      top: 50%;
+    }
+  }
+
+  @include mq($max-width: 900px) {
+    nav {
+      border-radius: 40px;
+      width: 100%;
+    }
+
+    ul {
+      justify-content: center;
+      
+    }
+
+
+  }
 }
 
 // blog page header

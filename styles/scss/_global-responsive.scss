@@ -1,0 +1,18 @@
+@include mq($max-width: 1150px) {
+  h2,
+  .yellow {
+    @include fontSize(30);
+    line-height: 38px;
+  }
+
+  p {
+    @include fontSize(18);
+    line-height: 28px;
+  }
+}
+
+@include mq($max-width: 900px) {
+  .wrapper {
+    width: 90%;
+  }
+}

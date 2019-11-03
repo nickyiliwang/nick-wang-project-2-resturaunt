@@ -322,6 +322,7 @@ nav a {
 
 nav {
   padding: 50px 0;
+  width: 60%;
 }
 
 nav ul {
@@ -453,6 +454,26 @@ form textarea {
   border: 1px solid #ffd300;
 }
 
+@media only screen and (max-width: 1150px) {
+  h2,
+  .yellow {
+    font-size: 30px;
+    font-size: 1.5rem;
+    line-height: 38px;
+  }
+  p {
+    font-size: 18px;
+    font-size: 0.9rem;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
 header {
   background: url("../assets/home-header.jpg");
   background-attachment: fixed;
@@ -493,6 +514,29 @@ header span::before {
   z-index: -1;
 }
 
+@media only screen and (max-width: 1200px) {
+  header nav {
+    background: rgba(15, 15, 15, 0.3);
+    border-radius: 40px;
+  }
+  header .image-container {
+    width: 40%;
+    top: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header nav {
+    border-radius: 40px;
+    width: 100%;
+  }
+  header ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .blog-header {
   background: url("../assets/blog-header.jpg");
   background-position: left;
@@ -524,18 +568,9 @@ section.three-images {
   padding: 100px 0;
 }
 
-section.three-images .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-section.three-images .image-container img {
+section.three-images ul li {
+  float: left;
+  width: calc(100% / 3 - 40px);
   margin: 0 20px;
 }
 
@@ -578,9 +613,16 @@ section.general-info .content-container {
   padding-right: 20px;
 }
 
+@media only screen and (max-width: 1150px) {
+  section.general-info {
+    padding: 100px 0 100px 0;
+  }
+}
+
 section.split-info {
   background: #171B0E;
   position: relative;
+  padding: 80px 0 50px 0;
 }
 
 section.split-info .burger-image,
@@ -604,18 +646,35 @@ section.split-info .something-new-image {
 }
 
 section.split-info .burger {
-  margin-left: 60%;
-  padding: 80px 0;
+  margin-left: 45vw;
+  padding-bottom: 80px;
 }
 
 section.split-info .something-new {
-  margin-right: 60%;
-  padding-bottom: 50px;
+  margin-right: 45vw;
   text-align: right;
 }
 
 section.split-info p {
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1300px) {
+  section.split-info {
+    padding: 50px 0 40px 0;
+  }
+  section.split-info .burger {
+    margin-left: 40vw;
+  }
+  section.split-info .something-new {
+    margin-right: 40vw;
+  }
+  section.split-info .something-new-image {
+    bottom: -40px;
+  }
+  section.split-info p {
+    margin-bottom: 30px;
+  }
 }
 
 section.gift-card {

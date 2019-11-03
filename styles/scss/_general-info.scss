@@ -30,3 +30,10 @@ section.general-info {
     padding-right: 20px;
   }
 }
+
+// responsive
+@include mq($max-width: 1150px) {
+  section.general-info {
+    padding: 100px 0 100px 0;
+  }
+}
