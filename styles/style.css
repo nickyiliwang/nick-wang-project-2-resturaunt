@@ -262,11 +262,27 @@ h2 {
   letter-spacing: 0.8px;
 }
 
+.yellow {
+  font-size: 45px;
+  font-size: 2.25rem;
+  line-height: 99.8px;
+  color: #ffd300;
+}
+
 h3 {
   font-size: 25px;
   font-size: 1.25rem;
   line-height: 58px;
   letter-spacing: 0.8px;
+  color: #ffd300;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  color: #ffd300;
 }
 
 p {
@@ -325,7 +341,7 @@ input[type="submit"] {
 }
 
 button:hover,
-button:focus {
+button:focus, input[type=submit]:hover, input[type=submit]:focus {
   background: #ffffff;
 }
 
@@ -348,6 +364,10 @@ button:active {
 img {
   width: 100%;
   display: block;
+}
+
+*:focus {
+  outline: 0;
 }
 
 header {
@@ -410,6 +430,10 @@ header nav ul li {
   height: 578px;
 }
 
+.blog-header h1 {
+  padding-left: 20px;
+}
+
 .contact-header {
   background: url("../assets/contact-header.jpg");
   height: 567px;
@@ -445,19 +469,26 @@ section.three-images .container img {
 }
 
 aside {
-  width: 35%;
-  padding-top: 100px;
+  width: 40%;
+  margin-top: 100px;
+  padding: 0 40px;
   position: relative;
 }
 
 aside .image-container {
   width: 455px;
   position: absolute;
+  top: -30px;
+  left: 0;
 }
 
 aside .aside-content {
   background: #171B0E;
-  padding: 500px 20px 20px 20px;
+  padding: 430px 20px 20px 20px;
+}
+
+aside .featured {
+  margin-bottom: 50px;
 }
 
 aside .recent ul {
@@ -467,7 +498,7 @@ aside .recent ul {
 }
 
 aside .recent ul li {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .blog-main {
@@ -478,7 +509,7 @@ aside .recent ul li {
 }
 
 .divider {
-  width: 65%;
+  width: 60%;
 }
 
 section.blog {
@@ -491,10 +522,49 @@ section.blog {
           flex-direction: column;
   border-left: 5px solid #ffd300;
   border-bottom: 5px solid #ffd300;
+  position: relative;
+  padding: 500px 0 50px 0;
+}
+
+section.blog .image-container {
+  position: absolute;
+  top: -150px;
+  right: 0;
+  -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
+  box-shadow: -30px 30px 0px -10px #ffd300;
+  width: calc(100% - 15px);
+}
+
+section.blog h2 {
+  font-size: 40px;
+  font-size: 2rem;
+}
+
+section.blog .date {
+  font-weight: 700;
+}
+
+section.blog p {
+  padding-bottom: 30px;
+}
+
+section.comments {
+  margin-top: 50px;
+}
+
+section.comments .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
 }
 
 .cards .image-container {
   width: 92px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 10px;
+  margin-right: 40px;
 }
 
 form {
@@ -505,6 +575,44 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 100px;
+}
+
+form input,
+form textarea {
+  background: none;
+  border: none;
+  margin: 20px 10px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  padding: 0 20px;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  padding: 0 20px;
+}
+
+form input {
+  border-bottom: 1px solid #ffd300;
+}
+
+form textarea {
+  border: 1px solid #ffd300;
 }
 
 section.general-info {
@@ -594,7 +702,7 @@ section.split-info .something-new {
 }
 
 section.gift-card {
-  padding: 180px 100px 100px 100px;
+  padding: 150px 100px 100px 100px;
   text-align: center;
   background: #2b331b;
 }
@@ -602,11 +710,6 @@ section.gift-card {
 section.gift-card p {
   text-align: left;
   margin-bottom: 50px;
-}
-
-section.gift-card h2 {
-  margin-bottom: 20px;
-  color: #ffd300;
 }
 
 section.nature {
@@ -624,6 +727,7 @@ section.nature .container {
 section.nature .nature-image {
   width: 300px;
   position: absolute;
+  top: 30px;
   -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
   box-shadow: -30px 30px 0px -10px #ffd300;
 }
@@ -642,12 +746,8 @@ section.nature .nature-content {
   margin-left: 30%;
 }
 
-section.nature .nature-content h2 {
-  color: #ffd300;
-}
-
 section.nature .nature-content p {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 section.nature .nature-content button {

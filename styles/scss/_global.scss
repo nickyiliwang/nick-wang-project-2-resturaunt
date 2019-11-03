@@ -37,10 +37,25 @@ h2 {
   letter-spacing: 0.8px;
 }
 
+// h2 with yellow color
+.yellow {
+  @include fontSize(45);
+  line-height: 99.8px;
+  color: $primaryYellow;
+}
+
 h3 {
   @include fontSize(25);
   line-height: 58px;
   letter-spacing: 0.8px;
+  color: $primaryYellow;
+}
+
+h4 {
+  @include fontSize(20);
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  color: $primaryYellow;
 }
 
 p {
@@ -87,14 +102,14 @@ input[type="submit"] {
 .inverted {
   color: $primaryWhite;
   background: $primaryBlack;
-      &:hover {
-      background: $primaryYellow;
-      color: $primaryBlack;
-    }
+  &:hover {
+    background: $primaryYellow;
+    color: $primaryBlack;
+  }
 }
 
 button:hover,
-button:focus {
+button:focus, input[type=submit]:hover, input[type=submit]:focus {
   background: $primaryWhite;
 }
 
@@ -119,4 +134,9 @@ button:active {
 img {
   width: 100%;
   display: block;
+}
+
+// remove focus box
+*:focus {
+  outline: 0;
 }

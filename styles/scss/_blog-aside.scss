@@ -1,16 +1,23 @@
 aside {
-  width: 35%;
-  padding-top: 100px;
+  width: 40%;
+  margin-top: 100px;
+  padding: 0 40px;
   position: relative;
 
   .image-container {
     width: 455px;
     position: absolute;
+    top: -30px;
+    left: 0;
   }
 
   .aside-content {
     background: $primaryBackgroundBlack;
-    padding: 500px 20px 20px 20px;
+    padding: 430px 20px 20px 20px;
+  }
+
+  .featured {
+    margin-bottom: 50px;
   }
 
   .recent {
@@ -20,7 +27,7 @@ aside {
       padding-left: 20px;
 
       li {
-        margin: 20px 0;
+        margin-bottom: 20px;
       }
     }
   }

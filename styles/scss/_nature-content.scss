@@ -9,7 +9,8 @@ section.nature {
   .nature-image {
     width: 300px;
     position: absolute;
-  @include box-shadow-left
+    top: 30px;
+    @include box-shadow-left;
   }
 
   .nature-content {
@@ -18,12 +19,8 @@ section.nature {
     flex-direction: column;
     margin-left: 30%;
 
-    h2 {
-      color: $primaryYellow;
-    }
-
     p {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     button {
