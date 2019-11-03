@@ -109,7 +109,9 @@ input[type="submit"] {
 }
 
 button:hover,
-button:focus, input[type=submit]:hover, input[type=submit]:focus {
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   background: $primaryWhite;
 }
 
@@ -139,4 +141,32 @@ img {
 // remove focus box
 *:focus {
   outline: 0;
+}
+
+// form styles
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  input,
+  textarea {
+    background: none;
+    border: none;
+    margin: 20px 10px;
+    padding: 20px;
+    color: $primaryWhite;
+
+    &::placeholder {
+      padding: 0 20px;
+    }
+  }
+
+  input {
+    border-bottom: 1px solid $primaryYellow;
+  }
+
+  textarea {
+    border: 1px solid $primaryYellow;
+  }
 }

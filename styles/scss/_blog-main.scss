@@ -4,7 +4,7 @@
 }
 
 // groups the blog sections and comment section and divvies it from the aside
-.divider {
+.blog-divider {
   width: 60%;
 }
 
@@ -17,10 +17,10 @@ section.blog {
   padding: 500px 0 50px 0;
 
   .image-container {
+    @include box-shadow-left;
     position: absolute;
     top: -150px;
     right: 0;
-    @include box-shadow-left;
     width: calc(100% - 15px);
   }
 
@@ -43,40 +43,12 @@ section.comments {
   .cards {
     display: flex;
     margin-bottom: 80px;
-  }
-}
 
-.cards .image-container {
-  width: 92px;
-  flex-shrink: 0;
-  margin-top: 10px;
-  margin-right: 40px;
-}
-
-// todo make this a global style
-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-
-  input,
-  textarea {
-    background: none;
-    border: none;
-    margin: 20px 10px;
-    padding: 20px;
-    color: $primaryWhite;
-
-    &::placeholder {
-      padding: 0 20px;
+    .image-container {
+      width: 92px;
+      flex-shrink: 0;
+      margin-top: 10px;
+      margin-right: 40px;
     }
-  }
-
-  input {
-    border-bottom: 1px solid $primaryYellow;
-  }
-
-  textarea {
-    border: 1px solid $primaryYellow;
   }
 }

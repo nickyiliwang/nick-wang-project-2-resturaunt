@@ -341,7 +341,9 @@ input[type="submit"] {
 }
 
 button:hover,
-button:focus, input[type=submit]:hover, input[type=submit]:focus {
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   background: #ffffff;
 }
 
@@ -368,6 +370,54 @@ img {
 
 *:focus {
   outline: 0;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+
+form input,
+form textarea {
+  background: none;
+  border: none;
+  margin: 20px 10px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  padding: 0 20px;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  padding: 0 20px;
+}
+
+form input {
+  border-bottom: 1px solid #ffd300;
+}
+
+form textarea {
+  border: 1px solid #ffd300;
 }
 
 header {
@@ -466,153 +516,6 @@ section.three-images .container {
 
 section.three-images .container img {
   margin: 0 20px;
-}
-
-aside {
-  width: 40%;
-  margin-top: 100px;
-  padding: 0 40px;
-  position: relative;
-}
-
-aside .image-container {
-  width: 455px;
-  position: absolute;
-  top: -30px;
-  left: 0;
-}
-
-aside .aside-content {
-  background: #171B0E;
-  padding: 430px 20px 20px 20px;
-}
-
-aside .featured {
-  margin-bottom: 50px;
-}
-
-aside .recent ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  padding-left: 20px;
-}
-
-aside .recent ul li {
-  margin-bottom: 20px;
-}
-
-.blog-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #364419;
-}
-
-.divider {
-  width: 60%;
-}
-
-section.blog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-left: 5px solid #ffd300;
-  border-bottom: 5px solid #ffd300;
-  position: relative;
-  padding: 500px 0 50px 0;
-}
-
-section.blog .image-container {
-  position: absolute;
-  top: -150px;
-  right: 0;
-  -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
-  box-shadow: -30px 30px 0px -10px #ffd300;
-  width: calc(100% - 15px);
-}
-
-section.blog h2 {
-  font-size: 40px;
-  font-size: 2rem;
-}
-
-section.blog .date {
-  font-weight: 700;
-}
-
-section.blog p {
-  padding-bottom: 30px;
-}
-
-section.comments {
-  margin-top: 50px;
-}
-
-section.comments .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 80px;
-}
-
-.cards .image-container {
-  width: 92px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-top: 10px;
-  margin-right: 40px;
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 100px;
-}
-
-form input,
-form textarea {
-  background: none;
-  border: none;
-  margin: 20px 10px;
-  padding: 20px;
-  color: #ffffff;
-}
-
-form input::-webkit-input-placeholder,
-form textarea::-webkit-input-placeholder {
-  padding: 0 20px;
-}
-
-form input:-ms-input-placeholder,
-form textarea:-ms-input-placeholder {
-  padding: 0 20px;
-}
-
-form input::-ms-input-placeholder,
-form textarea::-ms-input-placeholder {
-  padding: 0 20px;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  padding: 0 20px;
-}
-
-form input {
-  border-bottom: 1px solid #ffd300;
-}
-
-form textarea {
-  border: 1px solid #ffd300;
 }
 
 section.general-info {
@@ -753,6 +656,105 @@ section.nature .nature-content p {
 section.nature .nature-content button {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+aside {
+  width: 40%;
+  margin-top: 100px;
+  padding: 0 40px;
+  position: relative;
+}
+
+aside .image-container {
+  width: 455px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+aside .aside-content {
+  background: #171B0E;
+  padding: 430px 20px 20px 20px;
+}
+
+aside .featured {
+  margin-bottom: 50px;
+}
+
+aside .recent ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 20px;
+}
+
+aside .recent ul li {
+  margin-bottom: 20px;
+}
+
+.blog-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #364419;
+}
+
+.blog-divider {
+  width: 60%;
+}
+
+section.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 5px solid #ffd300;
+  border-bottom: 5px solid #ffd300;
+  position: relative;
+  padding: 500px 0 50px 0;
+}
+
+section.blog .image-container {
+  -webkit-box-shadow: -30px -30px 0px -10px #ffd300;
+  box-shadow: -30px 30px 0px -10px #ffd300;
+  position: absolute;
+  top: -150px;
+  right: 0;
+  width: calc(100% - 15px);
+}
+
+section.blog h2 {
+  font-size: 40px;
+  font-size: 2rem;
+}
+
+section.blog .date {
+  font-weight: 700;
+}
+
+section.blog p {
+  padding-bottom: 30px;
+}
+
+section.comments {
+  margin-top: 50px;
+}
+
+section.comments .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+section.comments .cards .image-container {
+  width: 92px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 10px;
+  margin-right: 40px;
 }
 
 footer {
