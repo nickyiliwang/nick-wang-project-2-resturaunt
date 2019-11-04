@@ -40,12 +40,6 @@ section.split-info {
   section.split-info {
     padding: 50px 0 40px 0;
 
-    .burger {
-      margin-left: 40vw;
-    }
-    .something-new {
-      margin-right: 40vw;
-    }
     .something-new-image {
       bottom: -40px;
     }
@@ -55,16 +49,33 @@ section.split-info {
   }
 }
 
+@include mq($max-width: 1024px) {
+  section.split-info {
+    .something-new-image {
+      bottom: 10px;
+    }
+
+    .burger {
+      padding-bottom: 30px;
+    }
+
+    .burger {
+      margin-left: 42vw;
+    }
+    .something-new {
+      margin-right: 42vw;
+    }
+  }
+}
+
 @include mq($max-width: 900px) {
   section.split-info {
     padding: 50px 0 40px 0;
 
     .burger {
-      margin-left: 45vw;
+      padding-bottom: 90px;
     }
-    .something-new {
-      margin-right: 45vw;
-    }
+
     .burger-image {
       top: 50px;
     }
@@ -73,6 +84,44 @@ section.split-info {
     }
     p {
       margin-bottom: 20px;
+    }
+  }
+}
+
+@include mq($max-width: 700px) {
+  section.split-info {
+    padding: 80px 0;
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .burger-image,
+    .something-new-image {
+      position: static;
+      width: 60%;
+    }
+
+    .burger-image,
+    .something-new-image {
+      margin-bottom: 40px;
+    }
+
+    .burger {
+      margin-left: 0;
+      padding-bottom: 80px;
+    }
+    .something-new {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .burger,
+    .something-new {
+      width: 80%;
     }
   }
 }

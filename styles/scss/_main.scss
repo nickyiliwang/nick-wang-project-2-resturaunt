@@ -1,5 +1,7 @@
 section.cafe {
   background: url("../assets/banner.jpg");
+  background-position: center;
+  background-attachment: fixed;
   height: 500px;
 }
 
@@ -11,6 +13,28 @@ section.three-images {
       float: left;
       width: calc(100% / 3 - 40px);
       margin: 0 20px;
+
+      &:hover img {
+        transform: scale(1.2);
+        transition: all 250ms ease-in-out, transform 150ms ease;
+      }
+    }
+  }
+}
+
+@include mq($max-width: 700px) {
+  section.three-images {
+    padding: 60px 0;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        float: none;
+        width: 60%;
+        margin: 20px 0;
+      }
     }
   }
 }
