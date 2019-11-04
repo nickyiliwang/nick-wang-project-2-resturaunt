@@ -44,3 +44,35 @@ section.nature {
     }
   }
 }
+
+@include mq($max-width: 700px) {
+  section.nature {
+    padding: 100px 0;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .nature-image {
+      float: none;
+      width: 50%;
+      margin: 10px 0 40px 0;
+      padding-top: 0;
+    }
+
+    .nature-content {
+      float: none;
+      width: 80%;
+      margin-left: 0;
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}

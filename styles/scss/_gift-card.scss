@@ -17,3 +17,12 @@ section.gift-card {
     }
   }
 }
+
+@include mq($max-width: 800px) {
+  section.gift-card {
+    padding: 80px 50px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
