@@ -43,6 +43,11 @@
   .wrapper {
     width: 90%;
   }
+  h1,
+  span {
+    @include fontSize(60);
+    line-height: 90px;
+  }
 
   h2,
   .yellow {
@@ -60,8 +65,6 @@
 @include mq($max-width: 800px) {
   h1,
   span {
-    @include fontSize(45);
-    line-height: 70px;
   }
 
   h2,
@@ -75,4 +78,7 @@
     @include fontSize(16);
     line-height: 30px;
   }
+}
+
+@include mq($max-width: 768px) {
 }

@@ -499,6 +499,12 @@ form textarea {
   .wrapper {
     width: 90%;
   }
+  h1,
+  span {
+    font-size: 60px;
+    font-size: 3rem;
+    line-height: 90px;
+  }
   h2,
   .yellow {
     font-size: 30px;
@@ -514,12 +520,6 @@ form textarea {
 }
 
 @media only screen and (max-width: 800px) {
-  h1,
-  span {
-    font-size: 45px;
-    font-size: 2.25rem;
-    line-height: 70px;
-  }
   h2,
   .yellow {
     font-size: 25px;
@@ -581,16 +581,17 @@ header span::before {
   }
   header .image-container {
     width: 50%;
-    top: 40%;
+    top: 50%;
   }
 }
 
 @media only screen and (max-width: 900px) {
   header {
-    background-size: 200%;
+    background-size: cover;
+    padding-top: 20px;
   }
   header .image-container {
-    top: 40%;
+    width: 55%;
   }
   nav {
     border-radius: 40px;
@@ -600,12 +601,6 @@ header span::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  header {
-    padding-top: 20px;
   }
 }
 
@@ -687,13 +682,19 @@ section.general-info .content-container {
 
 @media only screen and (max-width: 1200px) {
   section.general-info {
-    padding: 120px 0 100px 0;
+    padding: 200px 0 100px 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  section.general-info {
+    padding: 150px 0 100px 0;
   }
 }
 
 @media only screen and (max-width: 900px) {
   section.general-info {
-    padding: 80px 0;
+    padding: 130px 0 80px 0;
   }
 }
 

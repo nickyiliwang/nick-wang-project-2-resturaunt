@@ -34,12 +34,18 @@ section.general-info {
 // responsive
 @include mq($max-width: 1200px) {
   section.general-info {
-    padding: 120px 0 100px 0;
+    padding: 200px 0 100px 0;
+  }
+}
+
+@include mq($max-width: 1024px) {
+  section.general-info {
+    padding: 150px 0 100px 0;
   }
 }
 
 @include mq($max-width: 900px) {
   section.general-info {
-    padding: 80px 0;
+    padding: 130px 0 80px 0;
   }
 }
