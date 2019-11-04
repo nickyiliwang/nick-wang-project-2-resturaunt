@@ -36,32 +36,49 @@ header {
       z-index: -1;
     }
   }
+}
 
-  // responsive
-  @include mq($max-width: 1200px) {
+// responsive
+@include mq($max-width: 1200px) {
+  header {
     nav {
       background: rgba($primaryBlack, $alpha: 0.3);
       border-radius: 40px;
     }
 
     .image-container {
-      width: 40%;
-      top: 50%;
+      width: 50%;
+      top: 40%;
+    }
+  }
+}
+
+@include mq($max-width: 900px) {
+  header {
+    background-size: 200%;
+
+    .image-container {
+      top: 40%;
     }
   }
 
-  @include mq($max-width: 900px) {
-    nav {
-      border-radius: 40px;
-      width: 100%;
+  nav {
+    border-radius: 40px;
+    width: 100%;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+
+@include mq($max-width: 800px) {
+  header {
+    
+    padding-top: 20px;
+    .image-container {
+      // top: 50%;
     }
-
-    ul {
-      justify-content: center;
-      
-    }
-
-
   }
 }
 

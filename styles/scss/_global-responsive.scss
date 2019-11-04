@@ -1,4 +1,29 @@
+@include mq($max-width: 1300px) {
+  h1,
+  span {
+    @include fontSize(60);
+  }
+
+  h2,
+  .yellow {
+    @include fontSize(35);
+    line-height: 48px;
+  }
+}
+
+@include mq($max-width: 1200px) {
+  h1,
+  span {
+    @include fontSize(55);
+  }
+}
+
 @include mq($max-width: 1150px) {
+  h1,
+  span {
+    @include fontSize(55);
+  }
+
   h2,
   .yellow {
     @include fontSize(30);
@@ -11,8 +36,43 @@
   }
 }
 
+@include mq($max-width: 1000px) {
+}
+
 @include mq($max-width: 900px) {
   .wrapper {
     width: 90%;
+  }
+
+  h2,
+  .yellow {
+    @include fontSize(30);
+    line-height: 48px;
+  }
+
+  button,
+  input[type="submit"] {
+    @include fontSize(18);
+    line-height: 38px;
+  }
+}
+
+@include mq($max-width: 800px) {
+  h1,
+  span {
+    @include fontSize(45);
+    line-height: 70px;
+  }
+
+  h2,
+  .yellow {
+    @include fontSize(25);
+    line-height: 30px;
+  }
+
+  button,
+  input[type="submit"] {
+    @include fontSize(16);
+    line-height: 30px;
   }
 }

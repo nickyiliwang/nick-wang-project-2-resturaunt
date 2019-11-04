@@ -2,9 +2,18 @@ section.gift-card {
   padding: 150px 100px 100px 100px;
   text-align: center;
   background: $primaryBackgroundPine;
-  
+
   p {
     text-align: left;
     margin-bottom: 50px;
+  }
+}
+
+@include mq($max-width: 1150px) {
+  section.gift-card {
+    padding: 120px 80px 80px 80px;
+    p {
+      margin-bottom: 30px;
+    }
   }
 }

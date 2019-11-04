@@ -54,3 +54,25 @@ section.split-info {
     }
   }
 }
+
+@include mq($max-width: 900px) {
+  section.split-info {
+    padding: 50px 0 40px 0;
+
+    .burger {
+      margin-left: 45vw;
+    }
+    .something-new {
+      margin-right: 45vw;
+    }
+    .burger-image {
+      top: 50px;
+    }
+    .something-new-image {
+      bottom: 50px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

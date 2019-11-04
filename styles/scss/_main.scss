@@ -7,10 +7,8 @@ section.three-images {
   background: $primaryBackgroundBlack;
   padding: 100px 0;
   ul {
-    
     li {
-    float: left;
-
+      float: left;
       width: calc(100% / 3 - 40px);
       margin: 0 20px;
     }
