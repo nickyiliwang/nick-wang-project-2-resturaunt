@@ -1,15 +1,22 @@
+// Util
 @import "./setup";
 @import "./utilities";
 @import "./media-queries";
+// Global Styles
 @import "./global";
-@import './global-responsive';
+@import "./navbar";
+@import "./global-responsive";
+// Headers for home, blog and contact pages
 @import "./header";
+// Home page
 @import "./main";
 @import "./general-info";
 @import "./split-info";
 @import "./gift-card";
 @import "./nature-content";
+// Blog page
 @import "./blog-aside";
 @import "./blog-main";
+// Contact page
 @import "./contact";
 @import "./footer";

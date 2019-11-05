@@ -47,7 +47,7 @@ section.nature {
 
 @include mq($max-width: 700px) {
   section.nature {
-    padding: 100px 0;
+    padding: 70px 0;
 
     .container {
       display: flex;
@@ -59,7 +59,7 @@ section.nature {
     .nature-image {
       float: none;
       width: 50%;
-      margin: 10px 0 40px 0;
+      margin: 10px 0 80px 0;
       padding-top: 0;
     }
 
