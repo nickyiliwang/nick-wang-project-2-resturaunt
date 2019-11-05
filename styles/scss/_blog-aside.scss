@@ -5,7 +5,7 @@ aside {
   position: relative;
 
   .image-container {
-    width: 455px;
+    width: 32vw; //455px
     position: absolute;
     top: -30px;
     left: 0;
@@ -13,7 +13,7 @@ aside {
 
   .aside-content {
     background: $primaryBackgroundBlack;
-    padding: 430px 20px 20px 20px;
+    padding: 30vw 30px 30px 30px; //430px
   }
 
   .featured {
@@ -27,6 +27,103 @@ aside {
 
     li {
       margin-bottom: 20px;
+    }
+  }
+}
+
+@include mq($max-width: 1200px) {
+  aside {
+    ul {
+      list-style-type: disc;
+      list-style-position: outside;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// layout change
+@include mq($max-width: 900px) {
+  aside {
+    width: 100%;
+    padding: 0;
+    margin: 80px 0 250px 0;
+
+    h3 {
+      @include fontSize(25);
+    }
+
+    .flex-container {
+      display: flex;
+    }
+
+    .image-container {
+      width: 40%;
+      position: static;
+    }
+
+    .aside-content {
+      width: 60%;
+      padding: 0 30px; //430px
+
+      .featured {
+        margin-bottom: 0;
+      }
+    }
+
+    .featured {
+      margin-bottom: 50px;
+    }
+
+    ul {
+      list-style-position: inside;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include mq($max-width: 700px) {
+  aside {
+    margin: 50px 0 200px 0;
+
+    .featured h3 {
+      @include fontSize(22);
+    }
+  }
+}
+
+@include mq($max-width: 700px) {
+  aside {
+    margin: 50px 0 200px 0;
+
+    .image-container {
+      width: 80%;
+    }
+
+    .aside-content {
+      padding: 10px 30px;
+      width: 80%;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .featured h3 {
+      @include fontSize(25);
+    }
+
+    ul {
+      padding: 0;
     }
   }
 }

@@ -15,8 +15,20 @@
   <body>
     <header>
       <div class="wrapper">
-        <a href="#"><i class="fas fa-bars hamburger"></i></a>
-        <nav>
+        <!-- <a href="#"><i class="fas fa-bars hamburger"></i></a> -->
+
+        <nav class="hamburger-nav">
+          <label for="toggle"><i class="fa fa-bars"></i></label>
+          <input type="checkbox" id="toggle" name="toggle" />
+          <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./pages/blog.html">Blog</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="desktop-nav">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>

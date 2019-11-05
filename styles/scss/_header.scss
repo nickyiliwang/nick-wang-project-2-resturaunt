@@ -5,7 +5,7 @@ header {
   background-repeat: no-repeat;
   background-position: top;
   position: relative;
-  height: 697px; // matching the header-img
+  height: 697px;
   padding-top: 50px;
 
   .image-container {
@@ -73,11 +73,6 @@ header {
   }
 }
 
-@include mq($max-width: 800px) {
-  header {
-  }
-}
-
 @include mq($max-width: 600px) {
   header {
     .image-container {
@@ -103,6 +98,39 @@ header {
   height: 578px;
   h1 {
     padding-left: 20px;
+    background: rgba($primaryBlack, $alpha: 0.3);
+    border-radius: 40px;
+    width: 30%;
+  }
+}
+
+@include mq($max-width: 1024px) {
+  .blog-header {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+  }
+}
+
+
+@include mq($max-width: 700px) {
+  .blog-header {
+    h1 {
+      padding: 0 50px;
+    }
+  }
+}
+
+@include mq($max-width: 490px) {
+  .blog-header {
+    background-position: top;
+    background-size: cover;
+    height: 40vh;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 

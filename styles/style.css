@@ -438,12 +438,12 @@ form textarea {
   border: 1px solid #ffd300;
 }
 
-nav {
+nav.desktop-nav {
   padding: 50px 0;
   width: 45vw;
 }
 
-nav a {
+nav.desktop-nav a {
   font-size: 20px;
   font-size: 1rem;
   color: #ffffff;
@@ -453,7 +453,7 @@ nav a {
   text-align: center;
 }
 
-nav a:hover {
+nav.desktop-nav a:hover {
   color: #ffd300;
   -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
@@ -461,18 +461,18 @@ nav a:hover {
   transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
 }
 
-nav ul {
+nav.desktop-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav li {
+nav.desktop-nav li {
   margin: 0 20px;
   position: relative;
 }
 
-nav li:after {
+nav.desktop-nav li:after {
   position: absolute;
   content: "";
   height: 2px;
@@ -488,18 +488,77 @@ nav li:after {
   transition: 0.5s;
 }
 
-nav li:hover:after {
+nav.desktop-nav li:hover:after {
   width: 80%;
   background: #ffd300;
 }
 
-.hamburger {
+.hamburger,
+.hamburger-nav {
   display: none;
+}
+
+.hamburger {
   font-size: 45px;
   font-size: 2.25rem;
   margin: 10px;
   color: #ffffff;
   text-align: left;
+}
+
+@media only screen and (max-width: 490px) {
+  .hamburger-nav {
+    display: block;
+  }
+  header {
+    /*  When the input is checked
+  grab the next sibling nav with the + selector
+*/
+  }
+  header ul.nav {
+    background: black;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    /*note how width and right are the same values*/
+    right: -100%;
+    /* Off the screen as wide as you are */
+    top: 10%;
+    height: 50%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    /* magic to animate it */
+  }
+  header ul.nav a {
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    font-size: 40px;
+    width: 100%;
+    padding: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    /*we also transition the background colour here*/
+  }
+  header ul.nav a:hover,
+  header ul.nav a:focus {
+    background: #3498db;
+  }
+  header input[type="checkbox"]:checked + ul.nav {
+    right: 0;
+    /*when the checkbox is checked, put the ul.nav back to right: 0; It was at right:-30%;*/
+  }
+  header input[type="checkbox"] {
+    display: none;
+    /*hide the input, we don't need to see it */
+  }
+  header label[for="toggle"] {
+    /*position the menu so that it doesn't slide off screen when we open it*/
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 10;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -623,6 +682,11 @@ nav li:hover:after {
     font-size: 1.5rem;
     line-height: 48px;
   }
+  h3 {
+    font-size: 20px;
+    font-size: 1rem;
+    line-height: 28px;
+  }
   p {
     font-size: 16px;
     font-size: 0.8rem;
@@ -727,6 +791,35 @@ header span::before {
 
 .blog-header h1 {
   padding-left: 20px;
+  background: rgba(15, 15, 15, 0.3);
+  border-radius: 40px;
+  width: 30%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .blog-header {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .blog-header h1 {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .blog-header {
+    background-position: top;
+    background-size: cover;
+    height: 40vh;
+  }
+  .blog-header h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .contact-header {
@@ -1083,7 +1176,7 @@ section.nature .nature-content button {
 
 @media only screen and (max-width: 700px) {
   section.nature {
-    padding: 70px 0;
+    padding: 80px 0;
   }
   section.nature .container {
     display: -webkit-box;
@@ -1123,7 +1216,7 @@ aside {
 }
 
 aside .image-container {
-  width: 455px;
+  width: 32vw;
   position: absolute;
   top: -30px;
   left: 0;
@@ -1131,7 +1224,7 @@ aside .image-container {
 
 aside .aside-content {
   background: #171B0E;
-  padding: 430px 20px 20px 20px;
+  padding: 30vw 30px 30px 30px;
 }
 
 aside .featured {
@@ -1146,6 +1239,97 @@ aside ul {
 
 aside ul li {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  aside ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 20px;
+  }
+  aside ul li {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  aside {
+    width: 100%;
+    padding: 0;
+    margin: 80px 0 250px 0;
+  }
+  aside h3 {
+    font-size: 25px;
+    font-size: 1.25rem;
+  }
+  aside .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  aside .image-container {
+    width: 40%;
+    position: static;
+  }
+  aside .aside-content {
+    width: 60%;
+    padding: 0 30px;
+  }
+  aside .aside-content .featured {
+    margin-bottom: 0;
+  }
+  aside .featured {
+    margin-bottom: 50px;
+  }
+  aside ul {
+    list-style-position: inside;
+    padding-left: 20px;
+  }
+  aside ul li {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  aside {
+    margin: 50px 0 200px 0;
+  }
+  aside .featured h3 {
+    font-size: 22px;
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  aside {
+    margin: 50px 0 200px 0;
+  }
+  aside .image-container {
+    width: 80%;
+  }
+  aside .aside-content {
+    padding: 10px 30px;
+    width: 80%;
+  }
+  aside .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  aside .featured h3 {
+    font-size: 25px;
+    font-size: 1.25rem;
+  }
+  aside ul {
+    padding: 0;
+  }
 }
 
 .blog-main {
@@ -1170,7 +1354,7 @@ section.blog {
   border-left: 5px solid #ffd300;
   border-bottom: 5px solid #ffd300;
   position: relative;
-  padding: 500px 0 50px 0;
+  padding: 30vw 0 50px 0;
 }
 
 section.blog .image-container {
@@ -1213,6 +1397,49 @@ section.comments .cards .image-container {
       flex-shrink: 0;
   margin-top: 10px;
   margin-right: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+  .blog-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.blog {
+    padding: 40vw 0 50px 0;
+  }
+  section.blog .image-container {
+    display: static;
+  }
+  .blog-divider {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .blog-main h2,
+  .blog-main .yellow {
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  section.blog {
+    padding: 33vw 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  section.blog {
+    padding: 20vw 0 50px 0;
+  }
 }
 
 section.contact {

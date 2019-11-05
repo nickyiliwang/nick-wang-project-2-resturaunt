@@ -122,6 +122,11 @@
     line-height: 48px;
   }
 
+  h3 {
+    @include fontSize(20);
+    line-height: 28px;
+  }
+
   p {
     @include fontSize(16);
     line-height: 28px;
