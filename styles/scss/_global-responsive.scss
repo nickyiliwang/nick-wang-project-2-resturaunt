@@ -69,10 +69,6 @@
 // end of 900
 
 @include mq($max-width: 800px) {
-  h1,
-  span {
-  }
-
   h2,
   .yellow {
     @include fontSize(25);
@@ -112,3 +108,32 @@
   }
 }
 // end of 490
+
+
+@include mq($max-width: 425px) {
+
+  h1,
+  span {
+    @include fontSize(45);
+    line-height: 80px;
+  }
+
+  h2,
+  .yellow {
+    @include fontSize(30);
+    line-height: 48px;
+  }
+
+  p {
+    @include fontSize(16);
+    line-height: 28px;
+  }
+
+  button,
+  input[type="submit"] {
+    @include fontSize(16);
+    line-height: 38px;
+  }
+
+}
+// end of 425

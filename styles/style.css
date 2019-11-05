@@ -307,6 +307,16 @@ p {
 
 .fab:hover.fab:before {
   color: #ffffff;
+  font-size: 40px;
+  font-size: 2rem;
+  -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav a {
@@ -317,7 +327,6 @@ nav a {
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  text-decoration: none;
 }
 
 nav a:hover {
@@ -344,9 +353,12 @@ nav ul li {
 }
 
 .hamburger {
-  font-size: 25px;
-  font-size: 1.25rem;
+  display: none;
+  font-size: 45px;
+  font-size: 2.25rem;
+  margin: 10px;
   color: #ffffff;
+  text-align: left;
 }
 
 button,
@@ -576,6 +588,32 @@ form textarea {
   }
 }
 
+@media only screen and (max-width: 425px) {
+  h1,
+  span {
+    font-size: 45px;
+    font-size: 2.25rem;
+    line-height: 80px;
+  }
+  h2,
+  .yellow {
+    font-size: 30px;
+    font-size: 1.5rem;
+    line-height: 48px;
+  }
+  p {
+    font-size: 16px;
+    font-size: 0.8rem;
+    line-height: 28px;
+  }
+  button,
+  input[type="submit"] {
+    font-size: 16px;
+    font-size: 0.8rem;
+    line-height: 38px;
+  }
+}
+
 header {
   background: url("../assets/home-header.jpg");
   background-attachment: fixed;
@@ -584,10 +622,6 @@ header {
   position: relative;
   height: 697px;
   padding-top: 50px;
-}
-
-header .hamburger {
-  display: none;
 }
 
 header .image-container {
@@ -652,6 +686,13 @@ header span::before {
 
 @media only screen and (max-width: 600px) {
   header .image-container {
+    top: 55%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header .image-container {
+    width: 70%;
     top: 55%;
   }
 }
@@ -1044,9 +1085,6 @@ section.nature .nature-content button {
     display: block;
     text-align: center;
   }
-  section.nature p {
-    text-align: left;
-  }
 }
 
 aside {
@@ -1183,6 +1221,66 @@ section.contact form {
   right: 100px;
   -webkit-box-shadow: 30px 30px 0px -10px #ffd300;
   box-shadow: 30px 30px 0px -10px #ffd300;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-header h1 {
+    padding-top: 50px;
+  }
+  section.contact {
+    padding: 100px;
+  }
+  section.contact .contact-info {
+    padding-top: 380px;
+    width: 100%;
+    text-align: center;
+  }
+  section.contact form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contact-header h1 {
+    padding-top: 50px;
+    text-align: center;
+  }
+  section.contact form {
+    right: 70px;
+  }
+  section.contact form input,
+  section.contact form textarea {
+    padding: 5px;
+  }
+  section.contact form ::-webkit-input-placeholder {
+    font-size: 12px;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+  section.contact form :-ms-input-placeholder {
+    font-size: 12px;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+  section.contact form ::-ms-input-placeholder {
+    font-size: 12px;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+  section.contact form ::placeholder {
+    font-size: 12px;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  section.contact .contact-info {
+    padding-top: 320px;
+  }
+  section.contact form {
+    right: 50px;
+  }
 }
 
 footer {

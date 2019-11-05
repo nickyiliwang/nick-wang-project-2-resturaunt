@@ -8,10 +8,6 @@ header {
   height: 697px; // matching the header-img
   padding-top: 50px;
 
-  .hamburger {
-    display: none;
-  }
-
   .image-container {
     position: absolute;
     right: 0;
@@ -89,6 +85,16 @@ header {
     }
   }
 }
+
+@include mq($max-width: 425px) {
+  header {
+    .image-container {
+      width: 70%;
+      top: 55%;
+    }
+  }
+}
+// end of 425
 
 // blog page header
 .blog-header {
