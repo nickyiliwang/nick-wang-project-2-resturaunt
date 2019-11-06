@@ -97,18 +97,6 @@
 }
 // end of 700
 
-@include mq($max-width: 490px) {
-  header {
-    .hamburger {
-      display: block;
-    }
-    nav {
-      display: none;
-    }
-  }
-}
-// end of 490
-
 @include mq($max-width: 425px) {
   h1,
   span {

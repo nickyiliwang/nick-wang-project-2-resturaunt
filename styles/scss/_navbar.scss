@@ -30,7 +30,6 @@ nav.desktop-nav {
       position: absolute;
       content: "";
       height: 2px;
-      /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
       bottom: -4px;
       margin: 0 auto;
       left: 0;
@@ -59,16 +58,16 @@ nav.desktop-nav {
   display: none;
 }
 
-.hamburger {
-  @include fontSize(45);
+.hamburger-nav i {
+  @include fontSize(50);
   margin: 10px;
   color: $primaryWhite;
-  text-align: left;
+  text-align: right;
 }
 
 // credits to  Bryan Willis and his codePen
 
-@include mq($max-width: 490px) {
+@include mq($max-width: 700px) {
   .hamburger-nav {
     display: block;
   }
@@ -78,17 +77,19 @@ nav.desktop-nav {
       background: black;
       position: fixed;
       z-index: 10;
-      width: 100%; /*note how width and right are the same values*/
-      right: -100%; /* Off the screen as wide as you are */
-      top: 10%;
+      width: 50%;
+      right: -500%;
+      top: 15%;
       height: 50%;
-      transition: all 0.5s; /* magic to animate it */
+      padding: 20px;
+      border-top-left-radius: 40px;
+      transition: all 0.5s;
     }
 
     ul.nav a {
-      border-bottom: 1px solid grey;
+      color: $primaryWhite;
       display: inline-block;
-      font-size: 40px;
+      @include fontSize(20);
       width: 100%;
       padding: 20px;
       transition: all 0.3s; /*we also transition the background colour here*/
@@ -96,25 +97,26 @@ nav.desktop-nav {
 
     ul.nav a:hover,
     ul.nav a:focus {
-      background: #3498db;
+     border-bottom: 2px solid $primaryYellow;
+
+
     }
 
     /*  When the input is checked
   grab the next sibling nav with the + selector
 */
     input[type="checkbox"]:checked + ul.nav {
-      right: 0; /*when the checkbox is checked, put the ul.nav back to right: 0; It was at right:-30%;*/
+      right: 0; 
     }
 
     input[type="checkbox"] {
-      display: none; /*hide the input, we don't need to see it */
+      display: none;
     }
 
     label[for="toggle"] {
-      /*position the menu so that it doesn't slide off screen when we open it*/
       position: fixed;
       top: 10px;
-      left: 10px;
+      right: 10px;
       color: white;
       z-index: 10;
     }
