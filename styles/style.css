@@ -692,6 +692,7 @@ header span {
   color: #0F0F0F;
   position: relative;
   z-index: 2;
+  display: inline-block;
 }
 
 header span::before {
@@ -700,9 +701,9 @@ header span::before {
   position: absolute;
   background: #ffffff;
   width: calc(100% + 10px);
-  top: -15px;
+  top: -5px;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   left: -5px;
   z-index: -1;
 }
