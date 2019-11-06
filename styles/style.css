@@ -509,21 +509,20 @@ nav.desktop-nav li:hover:after {
   .hamburger-nav {
     display: block;
   }
-  header {
-    /*  When the input is checked
-  grab the next sibling nav with the + selector
-*/
+  nav.desktop-nav {
+    display: none;
   }
   header ul.nav {
-    background: black;
+    background: #0F0F0F;
     position: fixed;
     z-index: 10;
     width: 50%;
-    right: -500%;
-    top: 15%;
+    right: -50%;
+    top: 10%;
     height: 50%;
     padding: 20px;
     border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
@@ -536,7 +535,6 @@ nav.desktop-nav li:hover:after {
     padding: 20px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    /*we also transition the background colour here*/
   }
   header ul.nav a:hover,
   header ul.nav a:focus {
@@ -552,7 +550,7 @@ nav.desktop-nav li:hover:after {
     position: fixed;
     top: 10px;
     right: 10px;
-    color: white;
+    color: #ffffff;
     z-index: 10;
   }
 }
@@ -580,16 +578,11 @@ nav.desktop-nav li:hover:after {
 }
 
 @media only screen and (max-width: 1150px) {
-  h1,
-  span {
-    font-size: 55px;
-    font-size: 2.75rem;
-  }
   h2,
   .yellow {
     font-size: 30px;
     font-size: 1.5rem;
-    line-height: 38px;
+    line-height: 48px;
   }
   p {
     font-size: 18px;
@@ -602,22 +595,9 @@ nav.desktop-nav li:hover:after {
   .wrapper {
     width: 90%;
   }
-  h1,
-  span {
-    font-size: 60px;
-    font-size: 3rem;
-    line-height: 90px;
-  }
-  h2,
-  .yellow {
-    font-size: 30px;
-    font-size: 1.5rem;
-    line-height: 48px;
-  }
   p {
     font-size: 16px;
     font-size: 0.8rem;
-    line-height: 28px;
   }
   button,
   input[type="submit"] {
@@ -636,13 +616,15 @@ nav.desktop-nav li:hover:after {
   }
   button,
   input[type="submit"] {
-    font-size: 16px;
-    font-size: 0.8rem;
-    line-height: 30px;
+    font-size: 18px;
+    font-size: 0.9rem;
   }
 }
 
 @media only screen and (max-width: 700px) {
+  header h1 {
+    margin-top: 100px;
+  }
   h2,
   .yellow {
     font-size: 35px;
@@ -677,13 +659,11 @@ nav.desktop-nav li:hover:after {
   p {
     font-size: 16px;
     font-size: 0.8rem;
-    line-height: 28px;
   }
   button,
   input[type="submit"] {
     font-size: 16px;
     font-size: 0.8rem;
-    line-height: 38px;
   }
 }
 
@@ -758,12 +738,6 @@ header span::before {
 }
 
 @media only screen and (max-width: 800px) {
-  header .hamburger {
-    display: block;
-  }
-  header nav {
-    display: none;
-  }
   header nav.desktop-nav {
     width: 50vw;
   }
@@ -806,6 +780,8 @@ header span::before {
 @media only screen and (max-width: 700px) {
   .blog-header h1 {
     padding: 0 50px;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -814,10 +790,6 @@ header span::before {
     background-position: top;
     background-size: cover;
     height: 40vh;
-  }
-  .blog-header h1 {
-    width: 100%;
-    text-align: center;
   }
 }
 
@@ -830,6 +802,12 @@ header span::before {
 
 .contact-header h1 {
   width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .contact-header h1 {
+    text-align: center;
+  }
 }
 
 section.cafe {
@@ -1293,16 +1271,6 @@ aside ul li {
   aside {
     margin: 50px 0 200px 0;
   }
-  aside .featured h3 {
-    font-size: 22px;
-    font-size: 1.1rem;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  aside {
-    margin: 50px 0 200px 0;
-  }
   aside .image-container {
     width: 80%;
   }
@@ -1322,12 +1290,18 @@ aside ul li {
         -ms-flex-align: center;
             align-items: center;
   }
-  aside .featured h3 {
-    font-size: 25px;
-    font-size: 1.25rem;
-  }
   aside ul {
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  aside p {
+    margin-bottom: 20px;
+  }
+  aside ul {
+    padding-left: 20px;
+    list-style-position: outside;
   }
 }
 
@@ -1379,8 +1353,7 @@ section.blog p {
 }
 
 section.comments {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px 0 100px 0;
 }
 
 section.comments .cards {
@@ -1478,9 +1451,6 @@ section.contact form {
 }
 
 @media only screen and (max-width: 900px) {
-  .contact-header h1 {
-    padding-top: 50px;
-  }
   section.contact {
     padding: 100px;
   }
@@ -1495,10 +1465,6 @@ section.contact form {
 }
 
 @media only screen and (max-width: 700px) {
-  .contact-header h1 {
-    padding-top: 50px;
-    text-align: center;
-  }
   section.contact form {
     right: 70px;
   }

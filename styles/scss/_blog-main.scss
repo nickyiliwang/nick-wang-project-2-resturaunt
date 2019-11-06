@@ -38,8 +38,7 @@ section.blog {
 }
 
 section.comments {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px 0 100px 0;
 
   .cards {
     display: flex;
@@ -85,18 +84,15 @@ section.comments {
     }
   }
 }
-// end of 800
 
 @include mq($max-width: 700px) {
   section.blog {
     padding: 33vw 0 50px 0;
   }
 }
-// end of 700
 
 @include mq($max-width: 425px) {
   section.blog {
     padding: 20vw 0 50px 0;
   }
 }
-// end of 700

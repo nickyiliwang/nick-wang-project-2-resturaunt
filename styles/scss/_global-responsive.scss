@@ -21,15 +21,10 @@
 // end of 1200
 
 @include mq($max-width: 1150px) {
-  h1,
-  span {
-    @include fontSize(55);
-  }
-
   h2,
   .yellow {
     @include fontSize(30);
-    line-height: 38px;
+    line-height: 48px;
   }
 
   p {
@@ -43,21 +38,9 @@
   .wrapper {
     width: 90%;
   }
-  h1,
-  span {
-    @include fontSize(60);
-    line-height: 90px;
-  }
-
-  h2,
-  .yellow {
-    @include fontSize(30);
-    line-height: 48px;
-  }
 
   p {
     @include fontSize(16);
-    line-height: 28px;
   }
 
   button,
@@ -77,13 +60,18 @@
 
   button,
   input[type="submit"] {
-    @include fontSize(16);
-    line-height: 30px;
+    @include fontSize(18);
   }
 }
 // end of 800
 
 @include mq($max-width: 700px) {
+  header {
+    h1 {
+      margin-top: 100px;
+    }
+  }
+
   h2,
   .yellow {
     @include fontSize(35);
@@ -117,13 +105,11 @@
 
   p {
     @include fontSize(16);
-    line-height: 28px;
   }
 
   button,
   input[type="submit"] {
     @include fontSize(16);
-    line-height: 38px;
   }
 }
 // end of 425

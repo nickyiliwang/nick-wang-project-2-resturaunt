@@ -5,7 +5,7 @@ aside {
   position: relative;
 
   .image-container {
-    width: 32vw; //455px
+    width: 32vw;
     position: absolute;
     top: -30px;
     left: 0;
@@ -13,7 +13,7 @@ aside {
 
   .aside-content {
     background: $primaryBackgroundBlack;
-    padding: 30vw 30px 30px 30px; //430px
+    padding: 30vw 30px 30px 30px;
   }
 
   .featured {
@@ -67,7 +67,7 @@ aside {
 
     .aside-content {
       width: 60%;
-      padding: 0 30px; //430px
+      padding: 0 30px;
 
       .featured {
         margin-bottom: 0;
@@ -93,16 +93,6 @@ aside {
   aside {
     margin: 50px 0 200px 0;
 
-    .featured h3 {
-      @include fontSize(22);
-    }
-  }
-}
-
-@include mq($max-width: 700px) {
-  aside {
-    margin: 50px 0 200px 0;
-
     .image-container {
       width: 80%;
     }
@@ -118,12 +108,20 @@ aside {
       align-items: center;
     }
 
-    .featured h3 {
-      @include fontSize(25);
-    }
-
     ul {
       padding: 0;
+    }
+  }
+}
+
+@include mq($max-width: 425px) {
+  aside {
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+      list-style-position: outside;
     }
   }
 }

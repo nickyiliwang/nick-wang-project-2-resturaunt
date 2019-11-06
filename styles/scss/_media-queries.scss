@@ -10,10 +10,10 @@
 // --- generator ---------------------------------------------------------------
 
 @mixin mq($args...) {
-  $media-type: 'only screen';
-  $media-type-key: 'media-type';
+  $media-type: "only screen";
+  $media-type-key: "media-type";
   $args: keywords($args);
-  $expr: '';
+  $expr: "";
 
   @if map-has-key($args, $media-type-key) {
     $media-type: map-get($args, $media-type-key);
@@ -52,7 +52,11 @@
 }
 
 @mixin screen-height($min, $max, $orientation: false) {
-  @include mq($min-height: $min, $max-height: $max, $orientation: $orientation) {
+  @include mq(
+    $min-height: $min,
+    $max-height: $max,
+    $orientation: $orientation
+  ) {
     @content;
   }
 }
@@ -80,14 +84,12 @@
 
 // --- hdtv --------------------------------------------------------------------
 
-@mixin hdtv($standard: '1080') {
+@mixin hdtv($standard: "1080") {
   $min-width: false;
   $min-height: false;
 
-  $standards: ('720p', 1280px, 720px)
-              ('1080', 1920px, 1080px)
-              ('2K', 2048px, 1080px)
-              ('4K', 4096px, 2160px);
+  $standards: ("720p", 1280px, 720px) ("1080", 1920px, 1080px)
+    ("2K", 2048px, 1080px) ("4K", 4096px, 2160px);
 
   @each $s in $standards {
     @if $standard == nth($s, 1) {
@@ -112,7 +114,7 @@
   $min: 320px;
   $max: 480px;
   $pixel-ratio: 2;
-  $aspect-ratio: '2/3';
+  $aspect-ratio: "2/3";
 
   @include mq(
     $min-device-width: $min,
@@ -131,7 +133,7 @@
   $min: 320px;
   $max: 568px;
   $pixel-ratio: 2;
-  $aspect-ratio: '40/71';
+  $aspect-ratio: "40/71";
 
   @include mq(
     $min-device-width: $min,

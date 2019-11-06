@@ -74,16 +74,6 @@ header {
 }
 
 @include mq($max-width: 800px) {
-
-header {
-    .hamburger {
-      display: block;
-    }
-    nav {
-      display: none;
-    }
-  }
-
   header {
     nav.desktop-nav {
       width: 50vw;
@@ -107,7 +97,6 @@ header {
     }
   }
 }
-// end of 425
 
 // blog page header
 .blog-header {
@@ -134,6 +123,8 @@ header {
   .blog-header {
     h1 {
       padding: 0 50px;
+      width: 100%;
+      text-align: center;
     }
   }
 }
@@ -143,11 +134,6 @@ header {
     background-position: top;
     background-size: cover;
     height: 40vh;
-
-    h1 {
-      width: 100%;
-      text-align: center;
-    }
   }
 }
 
@@ -159,5 +145,14 @@ header {
   height: 567px;
   h1 {
     width: 100%;
+  }
+}
+
+// responsive
+@include mq($max-width: 700px) {
+  .contact-header {
+    h1 {
+      text-align: center;
+    }
   }
 }
